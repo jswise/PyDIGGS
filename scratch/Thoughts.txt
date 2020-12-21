@@ -6,3 +6,4 @@ import to gINT
     GPJ
     enterprise
 generate JSON?
+diagram
