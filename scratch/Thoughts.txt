@@ -6,4 +6,5 @@ import to gINT
     GPJ
     enterprise
 generate JSON?
-diagram
+diagram existing schema
+make boring logs
