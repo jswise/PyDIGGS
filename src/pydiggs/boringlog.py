@@ -13,21 +13,21 @@ class BoringLog:
 
     def extract_xml(self, input_path):
         pydiggs_dir = pathlib.Path(__file__).parents[0]
-        # xsd = str(pydiggs_dir.joinpath('schema', 'Complete.xsd'))
-        # schema = xmlschema.XMLSchema(xsd)
+        xsd = str(pydiggs_dir.joinpath('schema', 'Complete.xsd'))
+        schema = xmlschema.XMLSchema(xsd)
         # xml_data = schema.to_dict('tests/test_cases/examples/collection/collection.xml')
-        # self.log_data['boring_id'] = 'temp'
+        self.log_data['boring_id'] = 'temp'
         
-        namespace = {
-            'default': 'http://diggsml.org/schemas/2.5.a',
-            'gml': 'http://www.opengis.net/gml/3.2'
-        }
-        tree = ET.parse(input_path)
-        root = tree.getroot()
-        first_feature = root.find('default:samplingFeature', namespace)
-        borehole = first_feature.find('default:Borehole', namespace)
-        name = borehole.find('gml:name', namespace)
-        self.log_data['boring_id'] = name.text
+        # namespace = {
+        #     'default': 'http://diggsml.org/schemas/2.5.a',
+        #     'gml': 'http://www.opengis.net/gml/3.2'
+        # }
+        # tree = ET.parse(input_path)
+        # root = tree.getroot()
+        # first_feature = root.find('default:samplingFeature', namespace)
+        # borehole = first_feature.find('default:Borehole', namespace)
+        # name = borehole.find('gml:name', namespace)
+        # self.log_data['boring_id'] = name.text
 
     def to_pdf(self, output_path):
         # output_text = '<p>Pretend this is a boring log.</p>'
