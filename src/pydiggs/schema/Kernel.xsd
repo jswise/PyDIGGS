@@ -3912,7 +3912,8 @@ For metamorphic rocks, this property is used to describe a set of mineral assemb
             <restriction base="gml:DomainSetType">
                 <sequence minOccurs="0">
                     <choice>
-                        <element ref="diggs:AbstractGeometry"/>
+                        <!-- <element ref="diggs:AbstractGeometry"/> -->
+                        <element ref="gml:Grid"/>
                         <!--
 DSB: REMOVED FROM PROFILE
         <element ref="gml:AbstractTimeObject"/>
@@ -4928,7 +4929,8 @@ DSB: REMOVED FROM PROFILE
         <complexContent>
             <restriction base="gml:CompositeValueType">
                 <sequence>
-                    <element ref="diggs:properties"/>
+                    <!-- <element ref="diggs:properties"/> -->
+                    <element ref="gml:valueComponent"/>
                 </sequence>
             </restriction>
         </complexContent>
