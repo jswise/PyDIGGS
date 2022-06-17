@@ -1,0 +1,9 @@
+@startuml KeynetixConverter
+
+(gINT) -down-> (Excel)
+(AGS) -down-> (Excel)
+(Excel) -down-> (DIGGS)
+(Excel) -down-> (CSV)
+(Excel) -down-> (KeyLAB)
+
+@enduml
